@@ -24,7 +24,10 @@ export function profileMarkup() {
               <span class="mono">Profile / 01</span>
             </div>
             ${profile.about.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}
-            <div class="about-panel__quote">«${escapeHtml(profile.quote)}»</div>
+            <div class="about-panel__quote">
+              <span class="about-panel__quote-label">Принцип работы</span>
+              ${escapeHtml(profile.principle)}
+            </div>
           </article>
 
           <article class="education-card reveal reveal--d1">
