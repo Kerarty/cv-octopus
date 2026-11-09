@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">«Механизм» — проектная схема производственного цикла</title>
+  <desc id="desc">Блок-схема дипломного проекта: заказ, чертёж, материалы, цех, контроль качества и сдача, а также связанные системы персонала, экономики и риска. Это проектная схема, а не скриншот игры.</desc>
+
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#D7DED8" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#C49A55" stroke-opacity="0.14" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#C49A55"/>
+    </marker>
+    <marker id="arrowDim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#89958D"/>
+    </marker>
+    <style>
+      .mono { font-family: 'IBM Plex Mono', Consolas, monospace; }
+      .display { font-family: 'Oswald', 'Arial Narrow', sans-serif; }
+      .label { fill: #D7DED8; font-size: 19px; letter-spacing: 2px; }
+      .sub { fill: #89958D; font-size: 12px; letter-spacing: 0.6px; }
+      .tiny { fill: #89958D; font-size: 10px; letter-spacing: 1.4px; }
+      .sand { fill: #C49A55; }
+      .box { fill: #1B2420; stroke: #344B3D; }
+      .box-accent { fill: #242D28; stroke: #C49A55; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#111513"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+
+  <!-- corner marks -->
+  <path d="M28 56V28h28M1144 28h28v28M28 664v28h28M1172 664v28h-28" fill="none" stroke="#C49A55" stroke-opacity="0.55" stroke-width="1.5"/>
+
+  <!-- top bar -->
+  <text x="64" y="66" class="mono sand" font-size="12" letter-spacing="3">МЕХАНИЗМ / FACTORY SIMULATION</text>
+  <text x="1136" y="66" text-anchor="end" class="mono" fill="#C49A55" fill-opacity="0.7" font-size="10" letter-spacing="2">PROJECT SCHEMATIC · NOT A SCREENSHOT</text>
+  <line x1="64" y1="84" x2="1136" y2="84" stroke="#D7DED8" stroke-opacity="0.14"/>
+
+  <text x="64" y="132" class="display" fill="#D7DED8" font-size="34" letter-spacing="4">ПРОИЗВОДСТВЕННЫЙ ЦИКЛ</text>
+  <text x="64" y="158" class="mono sub" font-size="12" letter-spacing="1.6">ORDER → DRAWING → MATERIALS → SHOP → QC → DELIVERY</text>
+  <text x="1136" y="132" text-anchor="end" class="mono tiny">DIPLOMA PROJECT</text>
+  <text x="1136" y="152" text-anchor="end" class="mono tiny">UNITY / IN DEVELOPMENT</text>
+
+  <!-- main flow nodes -->
+  <g>
+    <rect class="box" x="64" y="206" width="152" height="86"/>
+    <text x="80" y="232" class="mono sand" font-size="10" letter-spacing="1.6">01 / ORDER</text>
+    <text x="80" y="258" class="display label" font-size="21">ЗАКАЗ</text>
+    <text x="80" y="277" class="mono sub">тип · срок · оплата</text>
+
+    <rect class="box" x="256" y="206" width="152" height="86"/>
+    <text x="272" y="232" class="mono sand" font-size="10" letter-spacing="1.6">02 / DRAWING</text>
+    <text x="272" y="258" class="display label" font-size="21">ЧЕРТЁЖ</text>
+    <text x="272" y="277" class="mono sub">запас · допуски</text>
+
+    <rect class="box" x="448" y="206" width="152" height="86"/>
+    <text x="464" y="232" class="mono sand" font-size="10" letter-spacing="1.6">03 / MATERIALS</text>
+    <text x="464" y="258" class="display label" font-size="21">МАТЕРИАЛЫ</text>
+    <text x="464" y="277" class="mono sub">партия · цена · риск</text>
+
+    <rect class="box" x="640" y="206" width="152" height="86"/>
+    <text x="656" y="232" class="mono sand" font-size="10" letter-spacing="1.6">04 / SHOP</text>
+    <text x="656" y="258" class="display label" font-size="21">ЦЕХ</text>
+    <text x="656" y="277" class="mono sub">операции · время</text>
+
+    <rect class="box" x="832" y="206" width="152" height="86"/>
+    <text x="848" y="232" class="mono sand" font-size="10" letter-spacing="1.6">05 / QUALITY</text>
+    <text x="848" y="258" class="display label" font-size="21">ОТК</text>
+    <text x="848" y="277" class="mono sub">годно · брак · переделка</text>
+
+    <rect class="box-accent" x="1024" y="206" width="112" height="86"/>
+    <text x="1040" y="232" class="mono sand" font-size="10" letter-spacing="1.6">06 / DELIVERY</text>
+    <text x="1040" y="258" class="display label" font-size="21">СДАЧА</text>
+    <text x="1040" y="277" class="mono sub">оплата · репутация</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#C49A55" stroke-opacity="0.65" stroke-width="1.5" marker-end="url(#arrow)">
+    <line x1="216" y1="249" x2="248" y2="249"/>
+    <line x1="408" y1="249" x2="440" y2="249"/>
+    <line x1="600" y1="249" x2="632" y2="249"/>
+    <line x1="792" y1="249" x2="824" y2="249"/>
+    <line x1="984" y1="249" x2="1016" y2="249"/>
+  </g>
+
+  <!-- feedback loop from QC to shop -->
+  <path d="M908 292v34H716v-24" fill="none" stroke="#C86D5F" stroke-opacity="0.8" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text x="812" y="340" text-anchor="middle" class="mono" fill="#C86D5F" fill-opacity="0.9" font-size="10" letter-spacing="1.4">БРАК → ПЕРЕДЕЛКА</text>
+
+  <!-- system panels -->
+  <g>
+    <rect x="64" y="398" width="336" height="182" fill="#1B2420" fill-opacity="0.72" stroke="#D7DED8" stroke-opacity="0.13"/>
+    <rect x="64" y="398" width="336" height="3" fill="#344B3D"/>
+    <text x="84" y="428" class="mono sand" font-size="10" letter-spacing="2">SYSTEM A / PERSONNEL</text>
+    <text x="84" y="456" class="display label" font-size="20">ПЕРСОНАЛ</text>
+    <text x="84" y="480" class="mono sub">усталость → качество и скорость</text>
+    <text x="84" y="500" class="mono sub">смены · отдых · квалификация</text>
+    <path d="M84 520h296" stroke="#D7DED8" stroke-opacity="0.1"/>
+    <text x="84" y="544" class="mono tiny">СВЯЗЬ: ЦЕХ ↔ ОТК ↔ ОБЩЕЖИТИЕ</text>
+    <circle cx="368" cy="540" r="4" fill="#C49A55"/>
+
+    <rect x="432" y="398" width="336" height="182" fill="#1B2420" fill-opacity="0.72" stroke="#D7DED8" stroke-opacity="0.13"/>
+    <rect x="432" y="398" width="336" height="3" fill="#C49A55"/>
+    <text x="452" y="428" class="mono sand" font-size="10" letter-spacing="2">SYSTEM B / ECONOMY</text>
+    <text x="452" y="456" class="display label" font-size="20">ЭКОНОМИКА</text>
+    <text x="452" y="480" class="mono sub">материалы · заказы · улучшения</text>
+    <text x="452" y="500" class="mono sub">цена партии ↔ риск брака</text>
+    <path d="M452 520h296" stroke="#D7DED8" stroke-opacity="0.1"/>
+    <text x="452" y="544" class="mono tiny">СВЯЗЬ: ЗАКАЗ ↔ МАТЕРИАЛЫ ↔ СДАЧА</text>
+    <circle cx="736" cy="540" r="4" fill="#C49A55"/>
+
+    <rect x="800" y="398" width="336" height="182" fill="#1B2420" fill-opacity="0.72" stroke="#D7DED8" stroke-opacity="0.13"/>
+    <rect x="800" y="398" width="336" height="3" fill="#C86D5F"/>
+    <text x="820" y="428" class="mono sand" font-size="10" letter-spacing="2">SYSTEM C / RISK</text>
+    <text x="820" y="456" class="display label" font-size="20">РИСК</text>
+    <text x="820" y="480" class="mono sub">срочность ↔ качество ↔ прибыль</text>
+    <text x="820" y="500" class="mono sub">нет «просто лучшего» заказа</text>
+    <path d="M820 520h296" stroke="#D7DED8" stroke-opacity="0.1"/>
+    <text x="820" y="544" class="mono tiny">СВЯЗЬ: СРОЧНЫЙ ↔ ОБЫЧНЫЙ ↔ ДОЛГИЙ</text>
+    <circle cx="1104" cy="540" r="4" fill="#C86D5F"/>
+  </g>
+
+  <!-- connectors from main flow to systems -->
+  <g stroke="#89958D" stroke-opacity="0.42" stroke-width="1" stroke-dasharray="3 5" marker-end="url(#arrowDim)">
+    <path d="M716 292v86"/>
+    <path d="M524 292v86"/>
+    <path d="M908 292v86"/>
+  </g>
+
+  <!-- bottom legend -->
+  <line x1="64" y1="616" x2="1136" y2="616" stroke="#D7DED8" stroke-opacity="0.14"/>
+  <rect x="64" y="640" width="326" height="34" fill="url(#hatch)" stroke="#C49A55" stroke-opacity="0.45"/>
+  <text x="78" y="662" class="mono sand" font-size="10" letter-spacing="1.6">ПРОЕКТНАЯ СХЕМА / НЕ СКРИНШОТ ИГРЫ</text>
+  <text x="1136" y="655" text-anchor="end" class="mono tiny">5 ЛОКАЦИЙ · 3 ТИПА ЗАКАЗОВ</text>
+  <text x="1136" y="671" text-anchor="end" class="mono tiny">GD-180 / 2026</text>
+</svg>
