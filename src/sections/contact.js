@@ -4,12 +4,8 @@ import { icon } from '../lib/icons.js';
 import { initCopyButtons } from '../components/interactions.js';
 
 const PORTFOLIO_URL = 'https://kerarty.github.io/cv-octopus/';
-const HR_EMAIL = 'hr@gamedevsource.com';
-const HR_SUBJECT = 'Game Designer — Portfolio';
 
 export function contactMarkup() {
-  const mailtoHr = `mailto:${HR_EMAIL}?subject=${encodeURIComponent(HR_SUBJECT)}`;
-
   return `
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="shell">
@@ -76,15 +72,6 @@ export function contactMarkup() {
               </a>
             </div>
           </article>
-        </div>
-
-        <div class="contact__cta reveal">
-          <p>
-            Отклик на позицию Game Designer в Octopus Games / GameDevSource.
-            Кнопка откроет почтовый клиент с адресом <strong style="color: var(--text)">${escapeHtml(HR_EMAIL)}</strong>
-            и темой <strong style="color: var(--text)">${escapeHtml(HR_SUBJECT)}</strong>.
-          </p>
-          <a class="btn btn--primary" href="${mailtoHr}">${icon('arrowUpRight')} Contact HR</a>
         </div>
 
         <footer class="site-footer">

@@ -359,14 +359,6 @@
     font-size: clamp(50px, 15vw, 92px);
   }
 
-  .contact__cta {
-    align-items: stretch;
-  }
-
-  .contact__cta .btn {
-    width: 100%;
-  }
-
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
@@ -470,10 +462,6 @@
   }
 
   .contact-card {
-    padding: 18px;
-  }
-
-  .contact__cta {
     padding: 18px;
   }
 
